@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+		<link rel="stylesheet" href="css/styles.css" />
+		<title>Test RWD</title>
+	</head>
+	<body>
+		<section id="container">
+			<header>
+				<h1>Mi sitio Peliculas</h1>
+				<p>Este es nuestro sitio de peliculas con Microformatos</p>
+			</header>
+			<section id="content">
+				<article>
+					<div itemscope itemtype="http://schema.org/Movie">
+						<h2 itemtprop="name">Inception</h2>
+						<div itemprop="director" itemscope itemtype="http://schema.org/Person">
+							Director: <span itemprop="director">Christopher Nola</span>
+						</div>
+						<span itemprop="genre">Ciencia Ficción</span>
+						<a href="#" itemprop="trailer">Trailer</a>
+					</div>
+				</article>
+				<article>
+					<h2>Algo de texto este espacio</h2>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, illo! Quisquam repellat amet at aliquam maxime, ducimus veniam porro neque eum molestiae! Libero beatae labore quas amet temporibus ipsa eum?
+					</p>
+				</article>
+			</section>
+			<footer>
+				Creando en 2104 &copy;
+			</footer>
+		</section>
+	</body>
+</html>
