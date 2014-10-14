@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="../css/jquery.mobile-1.4.4.min.css" />
+	<link rel="stylesheet" href="../css/jquery.mobile.structure-1.4.4.min.css" />
+	<link rel="stylesheet" href="../css/jquery.mobile.theme-1.4.4.min.css" />
+
+	<title>Lab4-6</title>
+</head>
+<body>
+	<!-- Estructura de multile template page en jQuery Mobile -->
+
+	<div data-role="page" data-theme="b" id="home">
+		<div data-role="header">
+			<h1>Lab4-6</h1>
+		</div>
+		<div data-role="content">
+			<!-- transicion flip -->
+			<a href="#about-us" class="ui-btn" data-transition="flip">Acerca de</a>
+			<!-- transicion pop -->
+			<a href="page-one.html" class="ui-btn" data-transition="slide">pagina 1</a>
+		</div>
+		<div data-role="footer">
+			Footer
+		</div>
+	</div>
+	
+	<!-- pagina 2: About Us -->
+	<div data-role="page" id="about-us" data-dom-cache="true">
+		<div data-role="header">
+			<h1>La4-6: Acerca de</h1>
+		</div>
+		<div data-role="content">
+			<!-- transicion slidedown -->
+			<a href="#home" class="ui-btn" data-transition="slidedown">Home</a>
+			<!-- transicion slideup -->
+			<a href="page-one.html" class="ui-btn" data-transition="slideup">pagina 1</a>
+		</div>
+		<div data-role="footer">
+			Footer
+		</div>
+	</div>
+
+	<!-- Cargando los scripts necesarios para el documento con jQuery Mobile -->
+	<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.mobile-1.4.4.min.js"></script>
+		<script type="text/javascript" src="js/lab4-6.js"></script>
+
+</body>
+</html>

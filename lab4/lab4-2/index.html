@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="../css/jquery.mobile-1.4.4.min.css" />
+	<link rel="stylesheet" href="../css/jquery.mobile.structure-1.4.4.min.css" />
+	<link rel="stylesheet" href="../css/jquery.mobile.theme-1.4.4.min.css" />
+
+	<title>Lab4-1</title>
+</head>
+<body>
+	<!-- Estructura de multile template page en jQuery Mobile -->
+	<div data-role="page" data-theme="b" id="home">
+		<div data-role="header">
+			<h1>Lab4-2</h1>
+		</div>
+		<div data-role="content">
+			<a href="#about-us" class="ui-btn">Acerca de</a>
+			<a href="#info" class="ui-btn">Info</a>
+			<a href="#products" class="ui-btn">Productos</a>
+			<a href="#contact-form" class="ui-btn">Contacto</a>
+			<a href="#list" class="ui-btn">lista</a>
+
+		</div>
+		<div data-role="footer">
+			Footer
+		</div>
+	</div>
+	
+	<!-- pagina 2: About Us -->
+	<div data-role="page" id="about-us">
+		<div data-role="header">
+			<h1>La4-2: Acerca de</h1>
+		</div>
+		<div data-role="content">
+			<a href="#home" class="ui-btn">Home</a>
+			<a href="#info" class="ui-btn">Info</a>
+			<a href="#products" class="ui-btn">Productos</a>
+			<a href="#contact-form" class="ui-btn">Contacto</a>
+			<a href="#list" class="ui-btn">lista</a>
+
+		</div>
+		<div data-role="footer">
+			Footer
+		</div>
+	</div>
+
+	<!-- Pagina 3: info -->
+	<div data-role="page" id="info">
+		<div data-role="header">
+			<h1>Lab4-2:Info</h1>
+		</div>
+		<div data-role="content">
+			<a href="#home" class="ui-btn">Home</a>
+			<a href="#about-us" class="ui-btn">Acerca de</a>
+			<a href="#products" class="ui-btn">Productos</a>
+			<a href="#contact-form" class="ui-btn">Contacto</a>
+			<a href="#list" class="ui-btn">lista</a>
+
+		</div>
+		<div data-role="footer">
+			Footer
+		</div>
+	</div>
+
+	<!-- Pagina 4: Productos -->
+	<div data-role="page" id="products">
+		<div data-role="header">
+			<h1>Lab4-2:Productos</h1>	
+		</div>
+		<div data-role="content">
+			<a href="#home" class="ui-btn">Home</a>
+			<a href="#about-us" class="ui-btn">Acerca de</a>
+			<a href="#info" class="ui-btn">Info</a>
+			<a href="#contact-form" class="ui-btn">Contacto</a>
+			<a href="#list" class="ui-btn">lista</a>
+
+		</div>
+		<div data-role="footer">
+			Footer
+		</div>
+	</div>
+
+	<!-- Pagina 5: Contacto -->
+	<div data-role="page" id="contact-form">
+		<div data-role="header">
+			<h1>Lab4-2:Contacto</h1>
+		</div>
+		<div data-role="content">
+			<a href="#home" class="ui-btn">Home</a>
+			<a href="#about-us" class="ui-btn">Acerca de</a>
+			<a href="#info" class="ui-btn">Info</a>
+			<a href="#products" class="ui-btn">productos</a>
+			<a href="#list" class="ui-btn">lista</a> <br />	
+		</div>
+		<div data-role="footer">
+			Footer
+		</div>
+	</div>
+
+	<!-- Pagina 6: Contacto -->
+	<div data-role="page" id="list">
+		<div data-role="header">
+			<h1>Lab4-2:Contacto</h1>
+		</div>
+		<div data-role="content">
+			<a href="#home" class="ui-btn">Home</a>
+			<a href="#about-us" class="ui-btn">Acerca de</a>
+			<a href="#info" class="ui-btn">Info</a>
+			<a href="#products" class="ui-btn">productos</a>
+			<a href="#list" class="ui-btn">lista</a> <br />
+			<ul data-role="listview" data-inset="true">
+				<li>Primer elemento de lista</li>
+				<li>Segundo elemento de lista</li>
+				<li>Tercero elemento de lista</li>
+				<li>Cuarto elemento de lista</li>
+			</ul>
+
+		</div>
+		<div data-role="footer">
+			Footer
+		</div>
+	</div>
+	<!-- Cargando los scripts necesarios para el documento con jQuery Mobile -->
+	<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.mobile-1.4.4.min.js"></script>
+</body>
+</html>
