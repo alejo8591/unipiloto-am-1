@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/jquery.mobile-1.4.4.min.css" />
+    <link rel="stylesheet" href="assets/css/jquery.mobile.structure-1.4.4.min.css" />
+    <link rel="stylesheet" href="assets/css/jquery.mobile.theme-1.4.4.min.css" />
+
+    <title>lab4-13</title>
+</head>
+<body>
+    <!-- Estructura de multile template page en jQuery Mobile -->
+    <div data-role="page" data-theme="b" id="home">
+        <!-- START: Agregando el elemento panel de jQuery Mobile -->
+
+        <div data-role="panel" id="panel-one">
+            <ul data-role="listview">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#list">Lista</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </div>
+        <!-- END: Agregando el elemento panel de jQuery Mobile -->
+
+
+        <div data-role="header">
+            <a href="#panel-one" data-icon="bars" class="ui-btn ui-shadow ui-corner-all ui-icon-bars ui-btn-icon-notext">Menú</a>
+            <h1>Lab4-13</h1>
+            <a href="#" data-icon="back" class="ui-btn ui-shadow ui-corner-all ui-icon-back ui-btn-icon-notext" data-rel="back">Atras</a>
+        </div>
+        <div data-role="content">
+            <!-- dos columnas -->
+            <div class="ui-grid-a">
+                <div class="ui-block-a">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                        in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                        nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                        sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+                <div class="ui-block-b">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                        in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                        nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                        sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            Footer
+        </div>
+    </div>
+
+    <!-- pagina 2: Lista de personas -->
+    <div data-role="page" id="list">
+        
+        <!-- START: Agregando el elemento panel de jQuery Mobile -->
+
+        <div data-role="panel" id="panel-two">
+            <ul data-role="listview">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#list">Lista</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </div>
+        <!-- END: Agregando el elemento panel de jQuery Mobile -->
+
+        <div data-role="header">
+            <a href="#panel-two" data-icon="bars" class="ui-btn ui-shadow ui-corner-all ui-icon-bars ui-btn-icon-notext">Menú</a>
+            <h1>Lab4-13</h1>
+            <a href="#" data-icon="back" class="ui-btn ui-shadow ui-corner-all ui-icon-back ui-btn-icon-notext" data-rel="back">Atras</a>
+        </div>
+        <div data-role="content">
+            <div data-role="collapsibleset" data-content-theme="b" data-iconpos="right" id="set">
+                <div data-role="collapsible" id="set1" data-collapsible="true">
+                    <h3>Alejandro Romero</h3>
+                    <p>age: 29</p>
+                    <p>email: alejo@alejo8.com</p>
+                    <p>city: Bogotá</p>
+                    <p>Country: Colombia</p>
+                </div>
+            </div>
+        </div>
+        <a href="#home" data-rel="back"></a>
+        <div data-role="footer" data-position="fixed">
+            Footer
+        </div>
+    </div>
+
+
+    <!-- Cargando los scripts necesarios para el documento con jQuery Mobile -->
+    <script type="text/javascript" src="assets/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.mobile-1.4.4.min.js"></script>
+    <script type="text/javascript" src="assets/js/lab4-13.js"></script>
+</body>
+</html>
