@@ -45,6 +45,22 @@
 				Footer
 			</div>
 		</div>
+		
+		<!-- User list -->
+		<div data-role="page" id="list">
+			<div data-role="header">
+				<h1>{{title}}</h1>
+			</div>
+			<div data-role="content">
+				<ul data-role="listview" id="user-list-json">
+				</ul>
+				<a href="#home" class="ui-btn">Home</a>
+			</div>
+			<div data-role="footer">
+				Footer
+			</div>
+		</div>
+
 		<!-- Dialog -->
 		<div data-role="page" id="dialog">
 			<div data-role="header">
@@ -58,9 +74,31 @@
 			</div>
 		</div>
 
+		<!-- Register Form -->
+		<div data-role="page" id="register">
+			<div data-role="header">
+				<h1>Correcto</h1>
+			</div>
+			<div data-role="content">
+				<form>
+					<label for="name" class="ui-hidden-accessible">Nombre:</label>
+					<input type="text" name="name" id="name" value="" placeholder="Nombre y Apellido" />
+					<label for="email" class="ui-hidden-accessible">Email</label>
+					<input type="email" name="email" id="email" value="" placeholder="Email" />
+					<label for="uid" class="ui-hidden-accessible">Documento de Identidad</label>
+					<input type="number" name="uid" id="uid" value="" placeholder="Documento de Identidad" />
+					<label for="password" class="ui-hidden-accessible">Contraseña</label>
+					<input type="password" name="password" id="password" value="" autocomplete="off" />
+					<button class="ui-btn" id="register-button">Enviar</button>
+				</form>
+			</div>
+			<div data-role="footer">
+				Footer
+			</div>
+		</div>
 		<!-- orden de los scripts -->
 		<script src="js/jquery-1.11.1.min.js"></script>
 		<script src="js/jquery.mobile-1.4.4.min.js"></script>
-		<script src="js/lab5-6.js"></script>
+		<script src="js/lab5-7.js"></script>
 	</body>
 </html>
