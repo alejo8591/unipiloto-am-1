@@ -43,11 +43,18 @@ router.get('/data', function(req, res){
 router.post('/login', function(req, res){
 
 	if(req.body.userid === "alejo8591@gmail.com" && req.body.password === "1234"){
+
+		/*
+		* cookie: generado a traves de hash md5
+		* cb829c5f0a1439282b18dd1f51eefa89 = unipiloto am-1
+		* fuente: http://www.md5hashgenerator.com/index.php
+		*/
+
 		var json = {
 
 			"name": "Alejandro Romero",
-			"email": "alejo8591@gmail.com",  
-			"cookie" :  "dfljlskfgfgfsñlkgj",
+			"email": "alejo8591@gmail.com",
+			"cookie" :  "cb829c5f0a1439282b18dd1f51eefa89",
 			"uid" : "22828282"
 		};
 
@@ -64,6 +71,27 @@ router.post('/login', function(req, res){
 
 		res.header('Content-Type', 'text/json').send(json);
 	}
+});
+
+
+router.post('/register', function(req, res){
+
+		console.log(req.body);
+		/*
+		 * cookie: generado a traves de hash md5
+		 * cb829c5f0a1439282b18dd1f51eefa89 = unipiloto am-1
+		 * fuente: http://www.md5hashgenerator.com/index.php
+		 */
+		var json = {
+			"name": "Alejandro Romero",
+			"email": "alejo8591@gmail.com",
+			"cookie" :  "cb829c5f0a1439282b18dd1f51eefa89",
+			"uid" : "22828282"
+		};
+
+		console.log(json);
+
+		res.header('Content-Type', 'text/json').send(json);
 });
 
 
