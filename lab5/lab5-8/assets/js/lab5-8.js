@@ -1,6 +1,5 @@
 sessionStorage.removeItem('sessionId');
 
-
 function Validate(){}
 
 Validate.prototype = {
@@ -139,6 +138,13 @@ $(document).on('pagecreate', '#register', function(){
 					console.log(data.name, data.email, data.cookie, data.uid);
 
 					$.mobile.changePage('#home');
+
+					sessionStorage.setItem('sessionId', data.cookie);
+					localStorage.setItem('name', data.name);
+					localStorage.setItem('email', data.email);
+					localStorage.setItem('uid', data.uid);
+					localStorage.setItem('password', data.password);
+
 
 				} else {
 

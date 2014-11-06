@@ -83,10 +83,11 @@ router.post('/register', function(req, res){
 		 * fuente: http://www.md5hashgenerator.com/index.php
 		 */
 		var json = {
-			"name": "Alejandro Romero",
-			"email": "alejo8591@gmail.com",
-			"cookie" :  "cb829c5f0a1439282b18dd1f51eefa89",
-			"uid" : "22828282"
+			"name": req.body.name,
+			"email": req.body.email,
+			"cookie":  "cb829c5f0a1439282b18dd1f51eefa89",
+			"password": req.body.password,
+			"uid" : req.body.uid
 		};
 
 		console.log(json);
