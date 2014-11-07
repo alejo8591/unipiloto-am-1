@@ -51,10 +51,9 @@ router.post('/login', function(req, res){
 		*/
 
 		var json = {
-
 			"name": "Alejandro Romero",
 			"email": "alejo8591@gmail.com",
-			"cookie" :  "cb829c5f0a1439282b18dd1f51eefa89",
+			"cookie": "cb829c5f0a1439282b18dd1f51eefa89",
 			"uid" : "22828282"
 		};
 
@@ -85,7 +84,7 @@ router.post('/register', function(req, res){
 		var json = {
 			"name": req.body.name,
 			"email": req.body.email,
-			"cookie":  "cb829c5f0a1439282b18dd1f51eefa89",
+			"cookie": "cb829c5f0a1439282b18dd1f51eefa89",
 			"password": req.body.password,
 			"uid" : req.body.uid
 		};
