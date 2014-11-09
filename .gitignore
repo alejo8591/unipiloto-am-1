@@ -85,3 +85,7 @@ IOS/www/
 
 # jQuery
 */jquery-*
+
+# Cordova
+*/*/platform
+*/*/plugins
