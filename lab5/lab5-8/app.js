@@ -34,6 +34,7 @@ app.use(bodyParser.urlencoded({
 app.use(express.static(path.join(__dirname, 'assets')));
 
 // Quien resuelve y gestiona las url a través del controlador
+
 var controllers = require('./controllers/routers');
 
 app.use(controllers);
@@ -48,3 +49,4 @@ app.get('*', function(req, res){
 var server = app.listen(app.get('port'), function(){
 	debug('Express esta escuchando por el puerto' + server.address().port);
 });
+

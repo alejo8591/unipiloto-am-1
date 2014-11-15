@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>Lab8-4</title>
+    </head>
+    <body>
+        <p>
+            Aplicación de Device Motion "Accelerometer", metodo getCurrentAcceleration() del objeto accelerometer
+        </p>
+        <input type="button" value="Verificar acelerometro" onclick="getAcceleration();">
+        <div id="acceleration-info">
+        </div>
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script>
+        var info = document.getElementById('acceleration-info');
+
+        console.log('Escuchando un evento del tipo click');
+
+        function getAcceleration(){
+            console.log('getAcceleration -> Ok');
+
+            info.innerHTML = '';
+
+            // Obteniendo la orientacion del dispositivo
+            navigator.accelerometer.getCurrentAcceleration(onAccelerationSuccess, onAccelerationError);
+        }
+
+        function onAccelerationSuccess(acceleration){
+
+            var date = new Date(acceleration.timestamp);
+
+            info.innerHTML = '<b>Aceleración en X: ' + acceleration.x + '<br />' +
+                             '<b>Aceleración en Y: ' + acceleration.y + '<br />' +
+                            '<b>Aceleración en Z: ' + acceleration.z + '<br />' +
+                             '<b>timestamp: ' + date.toLocaleString() + '<br />';
+
+        }
+
+        function onAccelerationError(){
+            console.log('Error en el acelerometro');
+            alert('Error en el acelerometro');
+        }
+        </script>
+    </body>
+</html>
