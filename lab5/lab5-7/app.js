@@ -26,6 +26,7 @@ app.set('views', path.join(__dirname, 'views'));
 
 // Encoding para las tramas HTTP
 app.use(bodyParser.json());
+
 app.use(bodyParser.urlencoded({
 	extended : true
 }));
@@ -49,4 +50,3 @@ app.get('*', function(req, res){
 var server = app.listen(app.get('port'), function(){
 	debug('Express esta escuchando por el puerto' + server.address().port);
 });
-

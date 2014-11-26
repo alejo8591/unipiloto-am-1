@@ -14,8 +14,6 @@ sessionStorage.removeItem('sessionId');
  * @constructor
  */
 function Validate(){}
-
-
 /*
  * @extends `Validate`
  */

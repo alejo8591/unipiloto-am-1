@@ -26,12 +26,12 @@ $(document).on('pagecreate', '#form-info', function(){
 		var age = parseInt(data);
 
 		if(age < 18 || age > 70){
-		
+
 			console.log('La edad no corresponde al rango');
 			event.preventDefault();
-		
+
 		} else {
-			
+
 			console.log('La edad ' + age + ' es Correcta:');
 
 			localStorage.setItem('age', age);
@@ -41,13 +41,14 @@ $(document).on('pagecreate', '#form-info', function(){
 
 			});
 
-			setTimeout(function() {
-   						$.mobile.changePage('#dialog', { transition: "pop",role: "dialog" });
-   			}, 100);
+			setTimeout(function(){
+				$.mobile.changePage('#dialog', { transition: "pop", role: "dialog" });
+
+			}, 100);
 
 			event.preventDefault();
 
-		} 
+		}
 	});
 });
 
@@ -56,17 +57,19 @@ $(document).on('pagecreate', '#register', function(){
 	function Validate(){}
 
 	Validate.prototype = {
-		email : function(email){
+
+		email: function(email){
 
 			var pattern = new RegExp(/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]+$/);
 			return pattern.test(email);
 		},
-		uid : function(uid){
+
+		uid: function(uid){
 			var pattern = new RegExp(/^[0-9]+$/);
 			return pattern.test(uid);
 		},
 
-		name : function(na){
+		name: function(na){
 			// var pattern = new RegExp(/^[a-zA-Z]+[ a-zA-Z-_]*$/);
 			// var pattern = new RegExp(/^[a-zA-Z-\s]+$/);
 			// var pattern = new RegExp(/^[a-zA-Z _]+$/);
@@ -74,7 +77,7 @@ $(document).on('pagecreate', '#register', function(){
 			return pattern.test(na);
 		},
 
-		password : function(passwd){
+		password: function(passwd){
 			var pattern = new RegExp(/^[A-Za-z0-9]+$/);
 			return pattern.test(passwd);
 		}
@@ -116,12 +119,12 @@ $(document).on('pagecreate', '#register', function(){
 			}).done(function(data){
 
 				console.log(data);
-			
+
 			}).fail(function(err){
 
 				console.log(err);
 			});
-		
+
 		} else {
 
 			console.log('Datos incorrectos');
