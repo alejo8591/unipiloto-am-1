@@ -1,4 +1,5 @@
 $(document).on('pagecreate', '#home', function(){
+
 	// almacenando informacion en local Storage
 	localStorage.setItem('firstName', 'Alejandro');
 
