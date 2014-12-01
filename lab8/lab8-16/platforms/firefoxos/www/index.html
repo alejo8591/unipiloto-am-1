@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.4.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.structure-1.4.4.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.theme-1.4.4.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.icons-1.4.4.min.css" />
+
+        <title>Lab8-16</title>
+    </head>
+    <body>
+        <div data-role="page" data-theme="b" id="home">
+            <div data-role="header">
+                <h1>Lab8-16</h1>            
+            </div>
+            <div data-role="content">
+                
+                <form>
+                    <label for="id">Cédula</label>
+                    <input type="id" value="0" disabled="disabled" />
+                    <label for="name">Nombre</label>
+                    <input type="text" name="name" id="name" placeholder="Nombre Completo" />
+                    <label for="description">Descripción</label>
+                    <input type="text" name="description" id="description">
+                    <a href="#" id="button-save" class="ui-btn">Guardar</a>
+                    <a href="#" id="button-delete" class="ui-btn">Borrar</a>
+                </form>
+                
+                <ul data-role="listview" id="show-list"></ul>
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <h1>Footer</h1>
+            </div>
+        </div>
+
+        <!-- scripts -->
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery.mobile-1.4.4.min.js"></script>
+        <script type="text/javascript" src="js/lawnchair-0.6.1.min.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+
+        <script type="text/javascript" src="js/lab8-16.js"></script>
+
+    </body>
+</html>

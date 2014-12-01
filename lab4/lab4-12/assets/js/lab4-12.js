@@ -7,7 +7,7 @@ $(document).on('pagecreate', '#list', function(){
 	}).done(function(json){
 
 		for(data in json){
-
+		
 			$('#user-list-json').append('<li>' + json[data].name + '</li>');
 		}
 
@@ -15,7 +15,7 @@ $(document).on('pagecreate', '#list', function(){
 
 	}).fail(function(){
 
-		$('#user-list-json').append('<li>¡Algo salio Mal!</li>');
+			$('#user-list-json').append('<li>¡Algo salio Mal!</li>');
 
 	});
 });

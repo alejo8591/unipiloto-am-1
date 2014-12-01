@@ -6,7 +6,6 @@ $(document).on('pagecreate', '#list', function(){
 		$(xml).find('person').each(function(){
 
 			$('#user-list-xml').append('<li>' + $(this).find('name').text() + '</li>');
-
 		});
 
 		$('#user-list-xml').listview('refresh');
@@ -14,6 +13,5 @@ $(document).on('pagecreate', '#list', function(){
 	}).fail(function(){
 
 		$('#user-list-xml').append('<li>Algo salio MAL!</li>');
-
 	});
 });
