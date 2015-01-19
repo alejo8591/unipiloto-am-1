@@ -4,24 +4,10 @@
         "uninstalled": []
     },
     "config_munge": {
-        "files": {
-            "config.xml": {
-                "parents": {
-                    "/*": [
-                        {
-                            "xml": "<feature name=\"Notification\"><param name=\"firefoxos-package\" value=\"Notification\" /></feature>",
-                            "count": 1
-                        }
-                    ]
-                }
-            }
-        }
+        "files": {}
     },
     "installed_plugins": {
         "org.apache.cordova.media-capture": {
-            "PACKAGE_NAME": "com.app.lab8-15"
-        },
-        "org.apache.cordova.dialogs": {
             "PACKAGE_NAME": "com.app.lab8-15"
         }
     },
