@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="lab9_7">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div ng-controller="lab9_3Controller">
+		<button ng-click="simple_click()">un click</button>
+
+		<button ng-dblclick="double_click()">Doble click</button>
+
+		<img src="http://dummyimage.com/600x400/000/fff" alt="img" ng-mouseleave="outMouseImg()" ng-mouseenter="onMouseImg()">
+
+		<h1>{{ event_click }}</h1>
+	</div>
+
+	<script type="text/javascript" src="../js/angular.min.js"></script>
+
+	<script>
+		angular.module('lab9_7', [])
+			   .controller('lab9_3Controller', ['$scope', function($scope){
+
+			   	$scope.simple_click = function(){
+
+			   		$scope.event_click = "Clic sencillo";			   		
+			   	};
+
+			   	$scope.double_click = function(){
+
+			   		$scope.event_click = "Doble Click";
+			   	};
+
+			   	$scope.outMouseImg = function(){
+			   	
+			   		$scope.event_click = "Cursor fuera de la imagen";
+			   	};
+
+			   	$scope.onMouseImg = function(){
+
+			   		$scope.event_click = "Cursor sobre la imagen";
+			   	};
+
+			   }]);
+	</script>
+</body>
+</html>

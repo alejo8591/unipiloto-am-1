@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="testApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div ng-controller="controllerOne">
+		<div ng-show="revealDiv">
+			Directivas dentro de directivas
+		</div>
+		<button ng-click="controlButton()" ng-show="revealButton">
+			Multiples Directivas
+		</button>
+	</div>
+	<script type="text/javascript" src="../js/angular.min.js"></script>
+	<script>
+
+		var app = angular.module('testApp', []);
+
+		app.controller('controllerOne', ['$scope', function($scope){
+			$scope.revealDiv = false;
+			$scope.revealButton = true;
+
+			$scope.controlButton = function(){
+				$scope.revealDiv = true;
+				$scope.revealButton = false;
+			}
+		}]);
+	</script>
+</body>
+</html>

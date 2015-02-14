@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="lab9_9">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div ng-controller="lab9_9Controller">
+
+		<img ng-src="{{ actual_image }}">
+
+		<button ng-click="revealImage('http://dummyimage.com/300x400/000/fff')">Imagen 1</button>
+
+		<button ng-click="revealImage('http://dummyimage.com/200x200/000/333')">Imagen 2</button>
+	</div>
+
+	<script type="text/javascript" src="../js/angular.min.js"></script>
+
+	<script>
+		angular.module('lab9_9', [])
+		       .controller('lab9_9Controller', ['$scope', function($scope){
+
+		       		$scope.actual_image = 'http://dummyimage.com/200x200/000/333';
+
+		       		$scope.revealImage = function(_image){
+
+		       			$scope.actual_image = _image;
+		       		};
+		       }]);
+	</script>
+</body>
+</html>

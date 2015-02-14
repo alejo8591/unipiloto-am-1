@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyInfo">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div ng-controller="MyInfoController">
+		<label for="name">Nombre</label>
+		<input type="text" name="name" ng-model="name"><br />
+		<label for="address">Dirección</label>
+		<input type="text" name="address" ng-model="address"><br />
+		<label for="phone">Teléfono</label>
+		<input type="text" name="phone" ng-model="phone"><br />
+		<h2>Mi información</h2>
+		<ul>
+			<li>Nombre: {{ name }}</li>
+			<li>Dirección: {{ address }}</li>
+			<li>Teléfono: {{ phone }}</li>
+		</ul>
+	</div>
+	<script type="text/javascript" src="../js/angular.min.js"></script>
+	<script>
+	angular.module('MyInfo', [])
+		   .controller('MyInfoController', ['$scope', function($scope){
+
+		   		$scope.name = '';
+
+		   		$scope.address = '';
+
+		   		$scope.phone = '';
+		   }])
+	</script>
+</body>
+</html>

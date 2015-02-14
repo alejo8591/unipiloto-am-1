@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	
+</head>
+<body>
+	<h1>Números</h1>
+	<ul>
+		<li>Operación: {{ 50 * 50 | currency }}</li>
+		<li>Valores: {{ 30303030 | currency: "$" }}</li>
+		<li>Suma: {{ 50 + 50 }}</li>
+		<li>Costo de: El elemento {{ 'smartphone' | uppercase }} cuesta {{ 50 * 0.16 + 50 | currency : "$" }} </li>
+	</ul>
+	<script type="text/javascript" src="../js/angular.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Names">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<div ng-controller="NamesController">
+	<h2>Los nombres son:</h2>
+	<ul>
+		<li ng-repeat="name in simple_names">{{ name }}</li>
+	</ul>
+
+	<h2>Otros nombres:</h2>
+	<ul>
+		<li ng-repeat="heroe in heroes">{{ heroe.firstname }} {{ heroe.lastname }}</li>
+	</ul>
+</div>
+
+<script type="text/javascript" src="../js/angular.min.js"></script>
+<script>
+	angular.module('Names', [])
+		   .controller('NamesController', ['$scope', function($scope){
+		   	$scope.simple_names = ['Diego', 'juan', 'Pedro'];
+
+		   	$scope.heroes = [
+		   		{
+		   			firstname: 'Alguien',
+		   			lastname: 'Con nombres'
+		   		},
+		   		{
+		   			firstname: 'Otro',
+		   			lastname: 'Con nombres'
+		   		},
+		   		{
+		   			firstname: 'La mascara',
+		   			lastname: 'Sin nombres'
+		   		}
+		   	];
+		   }])
+</script>
+</body>
+</html>

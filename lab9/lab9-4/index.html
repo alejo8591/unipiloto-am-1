@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="smartphoneStore">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div ng-controller="smartphoneStoreControler">
+		<label for="numberT">One Plus a: 300000</label>
+		<input type="text" name="numberT" ng-model="numberT">
+
+		<h2>Total de la Cantidad de Smartphones</h2>
+		<h1>Valor: {{ numberT * numberD }}</h1>
+	</div>
+	<script type="text/javascript" src="../js/angular.min.js"></script>
+	<script>
+	angular.module('smartphoneStore', [])
+		   .controller('smartphoneStoreControler', ['$scope', function($scope){
+
+		   		$scope.numberT = 0;
+
+		   		$scope.numberD = 300000;
+		   }])
+	</script>
+</body>
+</html>

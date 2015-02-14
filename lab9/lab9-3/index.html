@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="info">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+	<div ng-controller="controllerInfo">
+		<div ng-show="showInfo">
+			<ul>
+				<li>Nombre: {{ 'Alejandro Romero' }}</li>
+				<li>Dirección: {{ 'Cr 1 # 1 - 1' }}</li>
+				<li>Teléfono {{ '12239393' }}</li>
+			</ul>
+		</div>
+		<button ng-click="getInfo()">Ver mi Información</button>
+	</div>
+	<script type="text/javascript" src="../js/angular.min.js"></script>
+
+	<script>
+		angular.module('info', [])
+			   .controller('controllerInfo', ['$scope', function($scope){
+			
+					$scope.showInfo = false;
+
+					$scope.getInfo = function(){
+
+						if ($scope.showInfo === true) {
+							$scope.showInfo = false;
+
+						} else {
+							$scope.showInfo = true;
+						}
+					};
+
+		}]);
+	</script>
+</body>
+</html>

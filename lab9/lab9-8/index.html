@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="lab9_8">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<style>
+		div{
+			width: 600px;
+			margin: 10px auto;
+			text-align: center;
+		}
+
+		.container{
+			border: solid 2px;
+		}
+
+		.angularjs{
+			background: red;
+			font-size: 40px;
+			padding: 0 40px;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<div ng-controller="lab9_8Controller">
+		<div class="contanier">
+			<p ng-style="change">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam nulla quibusdam placeat, voluptas reprehenderit. Quia dolorem rem, iusto iste maxime fugit sunt est ut facere unde ad dolor, quam, quo.
+
+				<h2 ng-class="special_class">Cambiar esta clase</h2>
+			</p>
+		</div>
+
+		<button ng-click="changeProperties()">Cambiar Propiedades</button>
+		<button ng-click="changeClassProperties()">Cambiar Clase</button>
+		<button ng-click="resetClassProperties()">Eliminar Estilo</button>
+	</div>
+
+<script type="text/javascript" src="../js/angular.min.js"></script>
+	<script>
+		angular.module('lab9_8', [])
+		       .controller('lab9_8Controller', ['$scope', function($scope){
+		       			
+		       		$scope.changeProperties = function(){
+
+		       			$scope.change = {
+			       			 "background":"blue",
+			       			"color":"yellow"
+		       			};
+		       		};
+
+		       		$scope.changeClassProperties = function(){
+
+		       			$scope.special_class = "angularjs";
+		       		};
+
+		       		$scope.resetClassProperties = function(){
+
+		       			$scope.special_class = "";
+		       			$scope.change =  {
+		       				"font-size": "25px",
+		       				"color": "gray",
+		       				"background": "pink"
+		       			};
+		       		};
+		       }]);
+	</script>
+</body>
+</html>
